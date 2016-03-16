@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.example.Achyutgk.weatherforecast"
+        applicationId "com.example.suhasbshekhar.weatherforecast"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
