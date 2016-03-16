@@ -1,0 +1,1526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.suhasbshekar.weatherforecast.moreOptions"
+    tools:showIn="@layout/activity_more_options">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Details for "
+        android:id="@+id/summary"
+        android:textStyle="bold"
+        android:gravity="center|center_horizontal"
+        android:textSize="30sp"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:text="Next 24 Hours"
+        android:id="@+id/next24"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/next24hours"
+        android:layout_marginTop="115dp"
+        android:onClick="moreOptions"/>
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:text="Next 7 Days"
+        android:id="@+id/next7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/next7hour"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="115dp"
+        android:onClick="moreOptions"/>
+    <ViewSwitcher
+        android:id="@+id/viewswitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1630dp"
+            android:gravity="center"
+            android:id="@+id/next24display"
+            android:orientation="vertical" >
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp"
+                android:id="@+id/next24displaylay"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:background="#8FF7F2">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <TextView
+                        android:text="Summary"
+                        android:textSize="20sp"
+                        android:id="@+id/tab1"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/tab1temp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr01"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr02"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr03"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr11"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr12"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr13"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr21"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr22"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr23"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr31"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr32"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr33"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr41"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr42"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr43"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr51"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr52"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr53"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr61"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr62"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr63"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr71"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr72"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr73"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr81"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr82"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr83"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr91"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr92"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr93"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr101"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr102"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr103"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr111"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr112"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr113"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr121"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr122"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr123"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr131"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr132"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr133"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr141"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr142"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr143"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr151"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr152"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr153"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr161"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr162"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr163"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr171"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr172"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr173"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr181"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr182"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr183"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr191"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr192"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr193"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr201"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr202"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr203"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr211"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr212"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr213"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr221"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr222"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr223"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Time"
+                        android:id="@+id/hr231"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="55dp"
+                        android:text="Summary"
+                        android:id="@+id/hr232"
+                        android:padding="10dip" />
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Temp("
+                        android:textSize="20sp"
+                        android:id="@+id/hr233"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                <ViewSwitcher
+                    android:id="@+id/viewswitcherplus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/next24displayplus"
+                        android:orientation="vertical" >
+                        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:stretchColumns="1">
+                <TableRow
+                    android:background="#D4D5D6"
+                    android:textStyle="bold">
+                    <TextView
+                        android:layout_column="1"
+                        android:text=""
+                        android:id="@+id/hr241btn"
+                        android:textSize="20sp"
+                        android:padding="10dip"
+                        />
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="45dp"
+                        android:background="#698DFA"
+                        android:text="+"
+                        android:id="@+id/hr242btn"
+                        android:padding="10dip"
+                        android:onClick="moreOptions"/>
+                    <TextView
+                        android:layout_column="1"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:id="@+id/hr243btn"
+                        android:layout_marginLeft="125dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dip" />
+                </TableRow>
+                        </TableLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/next24displayplusd"
+                        android:orientation="vertical" >
+                        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:stretchColumns="1">
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr241"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr242"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr243"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr251"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr252"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr253"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr261"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr262"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr263"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr271"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr272"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr273"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr281"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr282"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr283"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr291"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr292"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr293"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr301"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr302"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr303"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr311"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr312"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr313"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr321"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr322"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr323"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr331"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr332"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr333"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr341"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr342"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr343"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr351"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr352"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr353"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr361"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr362"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr363"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr371"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr372"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr373"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr381"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr382"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr383"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr391"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr392"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr393"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr401"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr402"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr403"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr411"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr412"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr413"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr421"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr422"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr423"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr431"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr432"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr433"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr441"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr442"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr443"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr451"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr452"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr453"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow
+                                android:background="#D4D5D6"
+                                android:textStyle="bold">
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr461"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr462"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr463"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Time"
+                                    android:id="@+id/hr471"
+                                    android:textSize="20sp"
+                                    android:padding="10dip"
+                                    />
+                                <ImageView
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:text="Summary"
+                                    android:id="@+id/hr472"
+                                    android:padding="10dip" />
+                                <TextView
+                                    android:layout_column="1"
+                                    android:text="Temp("
+                                    android:textSize="20sp"
+                                    android:id="@+id/hr473"
+                                    android:layout_marginLeft="52dp"
+                                    android:layout_marginRight="38dp"
+                                    android:padding="10dip" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </RelativeLayout>
+
+                </ViewSwitcher>
+
+            </TableLayout>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/next7display"
+            android:orientation="vertical" >
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:background="#FAD74B"
+                    android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_column="1"
+                    android:text="Tab2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:id="@+id/tab201"
+                    android:padding="10dip" />
+                <ImageView
+                    android:layout_height="60dp"
+                    android:layout_width="60dp"
+                    android:id="@+id/tab202"
+                    android:padding="10dip" />
+            </TableRow>
+                <TableRow
+                    android:background="#FAD74B">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Min: "
+                        android:textSize="20sp"
+                        android:id="@+id/tab203"
+                        android:padding="10dip" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#8FF7F2"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Tab2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tab211"
+                        android:padding="10dip" />
+                    <ImageView
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:id="@+id/tab212"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#8FF7F2">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Min: "
+                        android:textSize="20sp"
+                        android:id="@+id/tab213"
+                        android:padding="10dip" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#F7B7F5"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Tab2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tab221"
+                        android:padding="10dip" />
+                    <ImageView
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:id="@+id/tab222"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#F7B7F5">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Min: "
+                        android:textSize="20sp"
+                        android:id="@+id/tab223"
+                        android:padding="10dip" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#9EF593"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Tab2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tab231"
+                        android:padding="10dip" />
+                    <ImageView
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:id="@+id/tab232"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#9EF593">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Min: "
+                        android:textSize="20sp"
+                        android:id="@+id/tab233"
+                        android:padding="10dip" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#F28DA6"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Tab2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tab241"
+                        android:padding="10dip" />
+                    <ImageView
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:id="@+id/tab242"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#F28DA6">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Min: "
+                        android:textSize="20sp"
+                        android:id="@+id/tab243"
+                        android:padding="10dip" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#E9F2B6"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Tab2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tab251"
+                        android:padding="10dip" />
+                    <ImageView
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:id="@+id/tab252"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#E9F2B6">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Min: "
+                        android:textSize="20sp"
+                        android:id="@+id/tab253"
+                        android:padding="10dip" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#A89BFA"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Tab2"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:id="@+id/tab261"
+                        android:padding="10dip" />
+                    <ImageView
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:id="@+id/tab262"
+                        android:padding="10dip" />
+                </TableRow>
+                <TableRow
+                    android:background="#A89BFA">
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Min: "
+                        android:textSize="20sp"
+                        android:id="@+id/tab263"
+                        android:padding="10dip" />
+
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+    </ViewSwitcher>
+
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.suhasbshekar.weatherforecast.JSONdata"
+    tools:showIn="@layout/activity_jsondata">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Details"
+        android:id="@+id/moreDetails"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="55dp"
+        android:onClick="moreOptions"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Map"
+        android:id="@+id/map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="55dp"
+        android:onClick="MapActivity"/>
+
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fb"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="280dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:id="@+id/imagep2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/summary"
+        android:gravity="center|center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="340dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/fb"
+        android:layout_alignEnd="@+id/fb"
+        android:layout_alignLeft="@+id/moreDetails"
+        android:layout_alignStart="@+id/moreDetails" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/results"
+        android:gravity="center|center_horizontal"
+        android:textSize="50sp"
+        android:layout_marginTop="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/lowhigh"
+        android:gravity="center|center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="470dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="536dp"
+        android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:text="Precipitation"
+            android:textSize="20sp"
+            android:padding="25dip" />
+        <TextView
+            android:text="Ctrl-O"
+            android:textSize="20sp"
+            android:layout_marginLeft="-20dp"
+            android:id="@+id/precip"
+            android:padding="25dip" />
+    </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Chance of Rain"
+                android:textSize="20sp"
+                android:padding="25dip" />
+            <TextView
+                android:text="Ctrl-O"
+                android:layout_marginLeft="-20dp"
+                android:id="@+id/cofrain"
+                android:textSize="20sp"
+                android:padding="25dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Wind Speed"
+                android:textSize="20sp"
+                android:padding="25dip" />
+            <TextView
+                android:text="Ctrl-O"
+                android:layout_marginLeft="-20dp"
+                android:textSize="20sp"
+                android:id="@+id/windspeed"
+                android:padding="25dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Dew Point"
+                android:textSize="20sp"
+                android:padding="25dip" />
+            <TextView
+                android:text="Ctrl-O"
+                android:layout_marginLeft="-20dp"
+                android:textSize="20sp"
+                android:id="@+id/dewp"
+                android:padding="25dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Humidity"
+                android:textSize="20sp"
+                android:padding="25dip" />
+            <TextView
+                android:text="Ctrl-O"
+                android:layout_marginLeft="-20dp"
+                android:textSize="20sp"
+                android:id="@+id/humid"
+                android:padding="25dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Visibility"
+                android:textSize="20sp"
+                android:padding="25dip" />
+            <TextView
+                android:text="Ctrl-O"
+                android:layout_marginLeft="-20dp"
+                android:textSize="20sp"
+                android:id="@+id/visibility"
+                android:padding="25dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Sunrise"
+                android:textSize="20sp"
+                android:padding="25dip" />
+            <TextView
+                android:text="Ctrl-O"
+                android:layout_marginLeft="-20dp"
+                android:textSize="20sp"
+                android:id="@+id/sunrise"
+                android:padding="25dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Sunset"
+                android:textSize="20sp"
+                android:padding="25dip" />
+            <TextView
+                android:text="Ctrl-O"
+                android:layout_marginLeft="-20dp"
+                android:textSize="20sp"
+                android:id="@+id/sunset"
+                android:padding="25dip" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
+</ScrollView>
